@@ -12,30 +12,7 @@ Fi-Track is a personal finance tracker that gives users full visibility over the
 
 ## Architecture Overview
 
-```
-┌─────────────────────────────────┐
-│        Vanilla JS Frontend      │
-│     (static folder · no build)  │
-└────────────────┬────────────────┘
-                 │ HTTP
-                 ▼
-┌─────────────────────────────────────────────────────────────┐
-│                      FastAPI Backend                        │
-│            JWT Auth · REST API · Business Logic             │
-├──────────────┬──────────────────┬───────────────────────────┤
-│   Finance    │   Subscription   │      Email Service        │
-│   Module     │     Engine       │   (Celery + Redis)*       │
-│ income/exp   │ auto-billing →   │  account verify ·         │
-│ budget/inv   │ expense          │  password reset ·         │
-│              │                  │  subscription reminders   │
-└──────────────┴──────────────────┴───────────────────────────┘
-                 │
-                 ▼
-        ┌─────────────────┐
-        │  MySQL (TiDB)   │
-        │  Cloud Database │
-        └─────────────────┘
-```
+![Architecture Diagram](./architecture.svg)
 
 > \* Celery + Redis background job processing is fully implemented in the `main` branch. In the current self-hosted VPS deployment it is intentionally disabled to optimise container resource usage — the complete implementation remains available in the codebase.
 
