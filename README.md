@@ -1,8 +1,6 @@
-# Fi-Track 💰
+# Fi-Track 
 
 > A headless full-stack personal finance application — CRUD for income, expenses, subscriptions, budgets, and investments with a dashboard overview, JWT authentication, and background email jobs via Celery.
-
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20to%20Explore-16A34A?style=for-the-badge)](http://fi-track.manavkashyap.com)
 
 ---
 
@@ -41,27 +39,6 @@ Fi-Track is a personal finance tracker that gives users full visibility over the
 
 > \* Celery + Redis background job processing is fully implemented in the `main` branch. In the current self-hosted VPS deployment it is intentionally disabled to optimise container resource usage — the complete implementation remains available in the codebase.
 
----
-
-## Repository Structure
-
-```
-finance_tracker/
-├── api/                  # FastAPI backend
-│   ├── routers/          # income, expense, subscription, budget, investment
-│   ├── models/           # SQLAlchemy models
-│   ├── schemas/          # Pydantic schemas
-│   ├── auth/             # JWT authentication
-│   ├── celery_worker/    # Background email jobs (main branch)
-│   └── main.py
-├── static/               # Vanilla JS frontend
-│   ├── index.html        # Login page (with demo button)
-│   ├── dashboard.html
-│   └── ...
-└── requirements.txt
-```
-
----
 
 ## Features
 
@@ -130,17 +107,11 @@ On a self-hosted VPS with constrained resources, running a Celery worker contain
 | Branch | Description |
 |---|---|
 | `main` | Full codebase including Celery + Redis email jobs |
-| `deploy` | Production branch — Celery disabled for VPS resource optimisation |
+| `deploy-branch` | Production branch — Celery disabled for VPS resource optimisation |
 
 ---
 
-## Live Demo
-
-Click the demo button on the login page to load a pre-populated test account — dashboard, expenses, subscriptions, and budgets are all pre-filled.
-
-**[→ Open Live Demo](http://fi-track.manavkashyap.com)**
-
----
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20to%20Explore-16A34A?style=for-the-badge)](http://fi-track.manavkashyap.com)
 
 ## Author
 
