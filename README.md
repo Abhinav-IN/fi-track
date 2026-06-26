@@ -88,8 +88,6 @@ On a self-hosted VPS with constrained resources, running a Celery worker contain
 
 ---
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20to%20Explore-16A34A?style=for-the-badge)](http://fi-track.manavkashyap.com)
-
 ## Author
 
 **Abhinav** · [GitHub @Abhinav-IN](https://github.com/Abhinav-IN)
